@@ -1,2 +1,2 @@
-# Atv2-Questao2-lp1
-Projeto da questão 2 da atividade 2 da matéria de lp1.
+# Atv2-Questao1-lp1
+Projeto da questão 1 da atividade 2 da matéria de lp1.
