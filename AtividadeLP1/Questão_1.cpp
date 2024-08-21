@@ -1,3 +1,20 @@
+/**********************************************************************************************************************
+string menu{} será o menu que é mostrado inicialmente para o usuário.
+
+main está a escolha de opções do usuário semelhante ao ultimo projeto
+
+QUESTÃO 1-A : Está no arquivo Calculadora.cpp
+QUESTÃO 1-B : Está neste arquivo
+1-A : Explicação
+Básicamente polimorfismo será a capacidade do objeto de "ter varias formas", um objeto geometrico por exemplo, se tornando cubo ou esfera.
+
+1-B : Explicação:
+    Métodos virtuais em c++ usam ponteiro para função, ou ponteiro para método, para que o polimorfismo dinamico seja aplicado.
+    Ao chamar objetos que possuem métodos virtuais o compilador tem um ponteiro já criado para aponta para a classe que está sendo chamada.
+    O método calcular_area/calcular_volume usa o pronteiro vptr para acessar o método correto. (Ou seja, Chama os metodos calc_area/calc_vol baseado no tipo real do objeto).
+    Que por sua vez está listado em vtable (contém todos os métodos virtuais e seus ponteiros).
+***********************************************************************************************************************/
+
 #include <iostream>
 #include <iomanip>
 #include "Calculadora.cpp"
@@ -77,6 +94,8 @@ int main(){
             cout << "\nA area da Esfera: " << calcular_area(&ce) << "cm quadrados.\n" << "O volume da Esfera: " << calcular_volume(&ce); 
             cout << "cm cubicos.\n" << endl;
             }
+            break;
+        case '5':
             break;
         default:
             cout << "Opcao invalida, tente um dos numeros da tabela.\n";

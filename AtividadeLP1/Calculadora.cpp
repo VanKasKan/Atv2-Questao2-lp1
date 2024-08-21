@@ -4,6 +4,7 @@ double pi = 3.14;
 
 using namespace std;
 
+// Classe base solidos geometricos
 class SolidosGeometricos {
 public:
     virtual double calc_area(){
@@ -16,6 +17,7 @@ public:
     }
 };
 
+// Forma de calcular piramides dando comportamento dinamico aos métodos de solidos geometrico (Será assim para todas as outras formas de SolidosGeometricos)
 class CalcPiramide : public SolidosGeometricos {
 private:
     double base_piramide, altura_piramide;
@@ -46,6 +48,7 @@ public:
     ~CalcPiramide(){};
 };
 
+// Forma de calcular area/volume de cubos
 class CalcCubo : public SolidosGeometricos {
 private:
     double aresta_base;
@@ -63,7 +66,7 @@ public:
     ~CalcCubo(){};
 };
 
-
+// Forma de calcular area/volume de paralelepipedos
 class CalcParalelepipedo : public SolidosGeometricos{
 private:
     double aresta1,aresta2,aresta3;
@@ -86,6 +89,7 @@ public:
     ~CalcParalelepipedo(){};
 };
 
+// Forma de calcular area/volume de esferas
 class CalcEsfera : public SolidosGeometricos {
 private:
     double diametro;
@@ -107,6 +111,7 @@ public:
     ~CalcEsfera(){};
 };
 
+// Chama os metodos calc_area/calc_vol baseado no tipo real do objeto
 double calcular_area(SolidosGeometricos* solidosGeometricos){
     return solidosGeometricos->calc_area();
 }
