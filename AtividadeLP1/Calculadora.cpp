@@ -3,9 +3,11 @@
 
 using namespace std;
 
+
+
 class CalcPiramide{
     private:
-        double base_piramide,altura_piramide;
+        double base_piramide, altura_piramide;
     public:
         double calcular_area(double base,double altura){
             double base_apotema =  ((base/2)*(base/2));
